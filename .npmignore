@@ -1,0 +1,9 @@
+node_modules
+.idea
+.npmignore
+.gitignore
+*.log
+*.sh
+*.json
+*.ts
+!*.d.ts
