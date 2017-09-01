@@ -22,3 +22,15 @@ const chalk = require('chalk');
 const log = lp(chalk.blue(' [suman] '), process.stdout);
 const logerr = lp(chalk.red(' [suman error] '), process.stderr);
 ```
+
+
+# Extra
+
+This works as a rudimentary solution:
+
+```js
+const log = console.log.bind(console, ' [suman] ');
+```
+
+But the problem with the above log function is that it won't handle new lines chars that are passed to it.
+

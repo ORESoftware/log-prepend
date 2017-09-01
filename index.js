@@ -3,7 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.lp = function (str, strm) {
     return function prependLog() {
         var args = Array.from(arguments);
-        args.length && strm.write(str);
+        var hasNonWhitespace = args.some(function (a) {
+            var str = String(a);
+            return str.length > 0 && /\S/g.test(str);
+        });
+        if (hasNonWhitespace) {
+            strm.write(str);
+        }
         args.forEach(function (s, i) {
             String(s).split('\n').forEach(function (s, i) {
                 if (i < 1) {
@@ -14,5 +20,6 @@ exports.lp = function (str, strm) {
                 }
             });
         });
+        strm.write('\n');
     };
 };

@@ -3,7 +3,16 @@ import {Stream, Writable} from "stream";
 export const lp = function (str: string, strm: Writable) {
   return function prependLog() {
     const args = Array.from(arguments);
-    args.length && strm.write(str);
+
+    const hasNonWhitespace = args.some(function(a){
+      let str = String(a);
+       return str.length > 0 && /\S/g.test(str);
+    });
+
+    if(hasNonWhitespace){
+      strm.write(str)
+    }
+
     args.forEach(function (s, i) {
       String(s).split('\n').forEach(function (s, i) {
         if (i < 1) {
@@ -14,5 +23,7 @@ export const lp = function (str: string, strm: Writable) {
         }
       });
     });
+
+    strm.write('\n');
   }
 };
