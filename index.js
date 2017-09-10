@@ -16,7 +16,12 @@ exports.lp = function (str, strm) {
                     strm.write(s + ' ');
                 }
                 else {
-                    strm.write('\n' + str + s);
+                    if (/\S/g.test(s)) {
+                        strm.write('\n' + str + s);
+                    }
+                    else {
+                        strm.write('\n' + s);
+                    }
                 }
             });
         });
