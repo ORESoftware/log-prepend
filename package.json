@@ -1,6 +1,6 @@
 {
   "name": "log-prepend",
-  "version": "0.0.1005",
+  "version": "0.0.1006",
   "description": "Prepend a string to each line of console output",
   "main": "index.js",
   "scripts": {
