@@ -1,4 +1,9 @@
+'use strict';
+
+//core
 import {Stream, Writable} from "stream";
+
+////////////////////////////////////////////////////////////////////
 
 export const lp = function (str: string, strm: Writable) {
   return function prependLog() {
