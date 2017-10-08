@@ -1,11 +1,24 @@
+
+### folders
 node_modules
 .idea
+test
+coverage
+
+### files
 .npmignore
 .gitignore
+.babelrc
+package-lock.json
+yarn.lock
+
+### matching
 *.log
 *.sh
 *.json
 *.ts
 *.md
 *.txt
+
+### negation
 !*.d.ts

@@ -1,6 +1,9 @@
-*.log
+
+### folders
 .idea
 node_modules
+coverage
 
-
+### matching
+*.log
 
