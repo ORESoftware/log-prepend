@@ -1,7 +1,8 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.lp = function (str, strm) {
+exports.lp = function (str, strm, beforeHook, afterHook) {
     return function prependLog() {
+        beforeHook && beforeHook();
         var args = Array.from(arguments);
         var hasNonWhitespace = args.some(function (a) {
             var str = String(a);
@@ -26,5 +27,6 @@ exports.lp = function (str, strm) {
             });
         });
         strm.write('\n');
+        afterHook && afterHook();
     };
 };

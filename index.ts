@@ -5,8 +5,11 @@ import {Stream, Writable} from "stream";
 
 ////////////////////////////////////////////////////////////////////
 
-export const lp = function (str: string, strm: Writable) {
+export const lp = function (str: string, strm: Writable, beforeHook: Function, afterHook: Function) {
   return function prependLog() {
+
+    beforeHook && beforeHook();
+
     const args = Array.from(arguments);
 
     const hasNonWhitespace = args.some(function (a) {
@@ -36,5 +39,6 @@ export const lp = function (str: string, strm: Writable) {
     });
 
     strm.write('\n');
+    afterHook && afterHook();
   }
 };
