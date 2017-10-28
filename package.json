@@ -1,6 +1,6 @@
 {
   "name": "log-prepend",
-  "version": "0.0.1006",
+  "version": "0.0.1007",
   "description": "Prepend a string to each line of console output",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   "homepage": "https://github.com/ORESoftware/log-prepend#readme",
   "devDependencies": {
     "@types/core-js": "^0.9.43",
-    "@types/node": "^8.0.26",
-    "suman": "^1.1.512240"
+    "@types/node": "^8.0.26"
   }
 }
