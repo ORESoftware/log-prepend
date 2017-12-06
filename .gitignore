@@ -10,4 +10,5 @@ yarn.lock
 
 ### matching
 *.log
+*.html
 

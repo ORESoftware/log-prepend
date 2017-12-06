@@ -19,6 +19,7 @@ yarn.lock
 *.ts
 *.md
 *.txt
+*.html
 
 ### negation
 !*.d.ts
