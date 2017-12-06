@@ -3,6 +3,7 @@
 .idea
 node_modules
 coverage
+.vscode
 
 ### files
 package-lock.json

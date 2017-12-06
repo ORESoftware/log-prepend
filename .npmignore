@@ -4,6 +4,7 @@ node_modules
 .idea
 test
 coverage
+.vscode
 
 ### files
 .npmignore
