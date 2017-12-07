@@ -25,3 +25,13 @@ Test.create(function (assert, describe, before, beforeEach, after, afterEach, it
   });
 
 });
+
+Test.define('zoom')
+.run(function(b, it){
+
+  it('is good', t => {
+
+  });
+
+
+});
