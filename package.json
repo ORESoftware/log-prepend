@@ -1,10 +1,12 @@
 {
   "name": "log-prepend",
-  "version": "0.0.1009",
+  "version": "0.0.1010",
   "description": "Prepend a string to each line of console output",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "suman"
+    "test": "suman test/logs.js --force-match"
   },
   "repository": {
     "type": "git",
