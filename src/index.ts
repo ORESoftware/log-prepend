@@ -5,6 +5,11 @@ import {Stream, Writable} from "stream";
 
 ////////////////////////////////////////////////////////////////////
 
+export const r2gSmokeTest = function () {
+  return true;
+};
+
+
 export const lp = function (str: string, strm: Writable, beforeHook: Function, afterHook: Function) {
   return function prependLog() {
 
@@ -42,3 +47,5 @@ export const lp = function (str: string, strm: Writable, beforeHook: Function, a
     afterHook && afterHook();
   }
 };
+
+export default lp;
